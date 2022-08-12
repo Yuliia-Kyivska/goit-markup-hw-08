@@ -1,0 +1,21 @@
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-left: auto;
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: $cub-bez;
+}
+
+.contact__link:hover,
+.contact__link:focus{
+  color: $blue-logo-color;
+}

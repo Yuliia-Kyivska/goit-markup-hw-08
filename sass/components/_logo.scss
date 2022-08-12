@@ -1,0 +1,21 @@
+.logo {
+  color: $blue-logo-color;
+  font-family: 'Raleway', cursive;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+  display: flex;
+}
+
+.nav__logo {
+  margin-right: 93px;
+}
+
+.dark-logo {
+  color: $dark-logo-color;
+}
+
+.white {
+  color: $white-color;
+}

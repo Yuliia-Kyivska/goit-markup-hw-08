@@ -1,0 +1,26 @@
+.benefits-card-icon {
+  background-color: $benef-card-icon;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  border: none;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.benefits-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $color-dark;
+  margin-bottom: 10px;
+}
+
+.benefits-text {
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.7;
+}

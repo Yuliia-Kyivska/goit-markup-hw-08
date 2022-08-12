@@ -1,0 +1,12 @@
+/* block 4  */
+
+.header {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid $grey-edging;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+}

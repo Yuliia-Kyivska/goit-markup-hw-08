@@ -1,0 +1,156 @@
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: $team-br;
+  transition: opacity 300ms ease-out, visibility 300ms ease-out;
+}
+
+.modal {
+  position: relative;
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  background-color:$bgmodal;
+  box-shadow: 0px 1px 3px $team-btm, 0px 1px 1px $team-bl, 0px 2px 1px $team-br;
+  border-radius: 4px;
+  transition: transform 300ms ease-out;
+}
+
+
+
+.backdrop.is-hidden .modal {
+  transform: scale(0) rotate(360deg);
+}
+
+.close-bt {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid $bt-close;
+  background-color: $white-color;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: $cub-bez;
+}
+
+.close-bt:hover .close-icon,
+.close-bt:focus .close-icon {
+  fill: $blue-logo-color;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: $color-dark;
+  margin-bottom: 12px;
+}
+
+.form-label:not(:last-of-type) {
+  margin-bottom: 10px;
+
+}
+
+.form-label:last-of-type {
+  margin-bottom: 20px;
+}
+
+.form-fild {
+  position: relative;
+}
+
+.form-input {
+  height: 40px;
+  width: 100%;
+  padding-left: 32px;
+}
+
+.form-input,
+.form-input-comment {
+  border-radius: 4px;
+  border: 1px solid $brinput;
+  outline: none;
+  cursor: pointer;
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: $cub-bez;
+}
+
+.form-input:hover,
+.form-input:focus,
+.form-input-comment:hover,
+.form-input-comment:focus {
+  border: 1px solid $blue-logo-color;
+
+}
+
+.form-input:focus-within+.form-icon,
+.form-input:hover+.form-icon {
+  fill: $blue-logo-color;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: fill 250ms $cub-bez;
+}
+
+.form-label {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: $grey-color;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-input-comment {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 12px 16px;
+  resize: none;
+  width: 100%;
+  height: 120px;
+}
+
+.form-input-comment:focus+.form-text,
+.form-input-comment:hover+.form-text {
+  border: 1px solid $blue-logo-color;
+}
+
+.form-input-comment::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: $txtplc;
+
+
+}

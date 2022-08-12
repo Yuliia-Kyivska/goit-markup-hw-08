@@ -1,0 +1,21 @@
+.card-text {
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.card-heading {
+  color: $color-dark;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.card-content {
+  border-top: 0;
+  border-bottom: 1px solid $grey-card-content;
+  border-right: 1px solid $grey-card-content;
+  border-left: 1px solid $grey-card-content;
+  padding: 20px 24px;
+}
