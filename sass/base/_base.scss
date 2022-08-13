@@ -5,12 +5,15 @@ body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-size: 14px;
-  padding: 0;
   letter-spacing: 0.03em;
   line-height: 1.71;
   position: relative;
+ 
+  @media screen(min-width:480px){
+width: 480px;
+    
+  }
 }
-
 
 .no-scroll {
   overflow: hidden;
