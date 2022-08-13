@@ -10,15 +10,10 @@ body {
   line-height: 1.71;
   position: relative;
 @media screen and (min-width: 900px) {
-      color: orange;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  body {
     color: orange;
   }
 }
+
 
 .no-scroll {
   overflow: hidden;
