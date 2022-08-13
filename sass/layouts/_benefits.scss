@@ -17,10 +17,25 @@
   text-transform: uppercase;
   color: $color-dark;
   margin-bottom: 10px;
+  @include mq(mob-only) {
+      text-align: center;
+    }
+}
+
+.benefits-list {
+  @include mq(tab) {
+    --cards-item: 2;
+  }
+
+  @include mq(desk) {
+    --cards-item: 4;
+  }
 }
 
 .benefits-text {
   font-weight: 400;
   letter-spacing: 0.03em;
   line-height: 1.7;
+
+ 
 }

@@ -5,8 +5,15 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   border-bottom: 1px solid $grey-edging;
+  @include mq(mob-only) {
+      position: relative;
+      
+    }
 }
 .header__container {
-  display: flex;
-  align-items: center;
+  
+  @include mq(tab) {
+      display: flex;
+      align-items: center;
+    }
 }

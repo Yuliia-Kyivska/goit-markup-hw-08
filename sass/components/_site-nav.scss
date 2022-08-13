@@ -2,12 +2,16 @@
   display: flex;
   align-items: center;
   color: $color-dark;
+ 
 }
 
 .nav__list {
   display: flex;
   align-items: center;
   gap: 50px;
+  @include mq(mob-only) {
+      display: none;
+    }
 }
 
 .nav__item {

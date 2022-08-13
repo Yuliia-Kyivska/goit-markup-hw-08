@@ -8,12 +8,8 @@ body {
   letter-spacing: 0.03em;
   line-height: 1.71;
   position: relative;
- 
-  @media screen(min-width:480px){
-width: 480px;
-    
   }
-}
+
 
 .no-scroll {
   overflow: hidden;

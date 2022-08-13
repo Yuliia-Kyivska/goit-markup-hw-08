@@ -9,8 +9,20 @@
   justify-content: center;
 }
 
-.customer-container>.customer-list {
-  --card-item: 6;
+.customer-list {
+@media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    --card-item: 2;
+  }
+
+  @media screen and (min-width: 768px) {
+    --card-item: 3;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --card-item: 6;
+  }
 }
 
 .customer-link {

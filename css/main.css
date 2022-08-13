@@ -1,6 +1,6 @@
 /* block 1  */
 :root {
-  --card-item: 4;
+  --card-item: 1;
   --card-set-gap: 30px;
 }
 
@@ -27,11 +27,6 @@ body {
   letter-spacing: 0.03em;
   line-height: 1.71;
   position: relative;
-}
-@media (min-width: 480px) {
-  body {
-    width: 480px;
-  }
 }
 
 .no-scroll {
@@ -162,37 +157,63 @@ img {
   border: none;
 }
 
-.card-set {
+.cards-set {
+  gap: var(--card-set-gap);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
+  /* margin-top: calc(-1 * $card-set-gap);
+    margin-left: calc(-1 * $card-set-gap); */
+}
+@media screen and (min-width: 768px) {
+  .cards-set {
+    --card-item: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cards-set {
+    --card-item: 3;
+  }
 }
 
-.card-item {
-  -ms-flex-preferred-size: calc(100% / var(--card-item) - var(--card-set-gap));
-      flex-basis: calc(100% / var(--card-item) - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+.cards-item {
+  -ms-flex-preferred-size: calc((100% - (var(--card-item) - 1) * var(--card-set-gap)) / var(--card-item));
+      flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-set-gap)) / var(--card-item));
+  /* margin-top: $card-set-gap;
+    margin-left: $card-set-gap; */
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .logo {
   color: #2196f3;
   font-family: "Raleway", cursive;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -200,7 +221,19 @@ img {
 }
 
 .nav__logo {
-  margin-right: 93px;
+  padding: 16px 15px 16px 0px;
+}
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__logo {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .dark-logo {
@@ -240,6 +273,11 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 50px;
+}
+@media (max-width: 767.98px) {
+  .nav__list {
+    display: none;
+  }
 }
 
 .nav__item {
@@ -298,6 +336,11 @@ img {
   gap: 50px;
   margin-left: auto;
 }
+@media (max-width: 767.98px) {
+  .contact {
+    display: none;
+  }
+}
 
 .contact__link {
   display: -webkit-box;
@@ -324,10 +367,15 @@ img {
 .section-title {
   font-weight: 700;
   color: #212121;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 42px;
   text-align: center;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+  }
 }
 
 .footer-title {
@@ -717,14 +765,21 @@ img {
   letter-spacing: 0.02em;
   border-bottom: 1px solid rgb(238, 238, 238);
 }
+@media (max-width: 767.98px) {
+  .header {
+    position: relative;
+  }
+}
 
-.header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 768px) {
+  .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .hero {
@@ -863,8 +918,25 @@ img {
           justify-content: center;
 }
 
-.customer-container > .customer-list {
-  --card-item: 6;
+@media screen and (min-width: 480px) {
+  .customer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    --card-item: 2;
+  }
+}
+@media screen and (min-width: 768px) {
+  .customer-list {
+    --card-item: 3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customer-list {
+    --card-item: 6;
+  }
 }
 
 .customer-link {
@@ -1001,6 +1073,22 @@ img {
   text-transform: uppercase;
   color: #212121;
   margin-bottom: 10px;
+}
+@media (max-width: 767.98px) {
+  .benefits-title {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-list {
+    --cards-item: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits-list {
+    --cards-item: 4;
+  }
 }
 
 .benefits-text {

@@ -3,6 +3,9 @@
   align-items: center;
   gap: 50px;
   margin-left: auto;
+  @include mq(mob-only) {
+      display: none;
+    }
 }
 
 .contact__link {
