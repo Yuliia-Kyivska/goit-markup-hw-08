@@ -1,18 +1,16 @@
-.customer-section {
+.customer {
   background-color: $white-color;
 }
 
 .customer-container {
-  height: 184px;
-  display: block;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
-.customer-list {
-@media screen and (min-width: 480px) {
-    display: flex;
-    flex-wrap: wrap;
+.customer__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media screen and (min-width: 478px) {
     --card-item: 2;
   }
 
@@ -25,22 +23,31 @@
   }
 }
 
-.customer-link {
+.customer__link {
+  height: 92px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 14px 29px;
   fill: $social-icon;
-  height: 92px;
-  padding: 16px;
   border: 1px solid $social-icon;
   border-radius: 4px;
   transition-property: border, fill;
   transition-duration: 250ms;
   transition-timing-function: $cub-bez;
-}
 
-.customer-link:hover,
-.customer-link:focus {
-  border: 1px solid $blue-logo-color;
-  fill: $blue-logo-color;
+  @media screen and (min-width: 478px) {
+    width: 210px;
+  }
+@media screen and (min-width: 768px){
+  width: 226px;
+}
+@media screen and (min-width: 1200px) {
+  width: 170px;
+}
+  &:hover,
+  &:focus {
+    border: 1px solid $blue-logo-color;
+    fill: $blue-logo-color;
+  }
 }

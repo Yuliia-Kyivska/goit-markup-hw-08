@@ -1,7 +1,11 @@
 .about__container {
   padding-top: 0;
 }
-
+.about{
+  @include mq(noDesk) {
+      display: none;
+    }
+}
 
 .about__list {
   --card-item: 3;
