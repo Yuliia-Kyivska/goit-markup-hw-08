@@ -5,9 +5,19 @@ body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-size: 14px;
+  padding: 0;
   letter-spacing: 0.03em;
   line-height: 1.71;
   position: relative;
+@media screen and (min-width: 900px) {
+      color: orange;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    color: orange;
+  }
 }
 
 .no-scroll {
