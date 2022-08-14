@@ -4,7 +4,7 @@
   padding-bottom: 60px;
 
   &.social-list__link {
-    color: $white;
+    color: $white-color;
     transition: background-color 250ms $cub-bez;
   }
 
@@ -13,35 +13,12 @@
   }
 }
 
-/*.footer-title {
-  display: block;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $white-color;
-  margin-bottom: 20px;
-
-  @include mq(mob-only) {
-    margin-top: 60px;
-  }
-
-  @include mq(noDesk) {
-    text-align: center;
-  }
-}
-*/
-
-.address {
-  color: $footer-primary-color;
-  font-style: inherit;
-}
-
 .footer__list {
-  display: block;
-  text-align: center;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
   @include mq(tab-only) {
     display: flex;
     flex-wrap: wrap;
@@ -49,13 +26,12 @@
     gap: 60px;
     justify-content: center;
   }
-  @media screen and (max-width: 767px) {
+  @include mq(desk) {
     display: flex;
     gap: 70px;
     align-items: baseline;
   }
 }
-
 .footer__item {
   @include mq(desk) {
     &:last-child {
@@ -63,18 +39,27 @@
     }
   }
 }
+
 .footer__logo {
   margin-bottom: 20px;
-
+  display: flex;
   @include mq(noDesk) {
     justify-content: center;
     margin-right: 0;
   }
 }
 
+.address {
+  color: $footer-primary-color;
+  font-style: inherit;
+}
 .street {
   font-style: normal;
   color: $white-color;
+  &:hover,
+  &:focus {
+    color: $blue-logo-color;
+  }
 }
 
 .footer-contacts {
@@ -98,7 +83,7 @@
   }
 }
 
-.subscription__title {
+.subscription__follow {
   display: block;
   font-style: normal;
   font-weight: 700;
@@ -108,11 +93,6 @@
   text-transform: uppercase;
   color: $white-color;
   margin-bottom: 20px;
-
-  @include mq(mob-only) {
-    margin-top: 60px;
-  }
-
   @include mq(noDesk) {
     text-align: center;
   }
@@ -145,7 +125,7 @@
   border-radius: 4px;
   transition: border-color 250ms $cub-bez;
 
-  @media screen and (max-width: 479px) {
+  @media screen and (min-width: 479px) {
     width: 100%;
     margin-bottom: 20px;
   }
