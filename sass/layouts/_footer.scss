@@ -42,13 +42,6 @@
 .footer__list {
   display: block;
   text-align: center;
-
-  @media screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-  }
-
   @include mq(tab-only) {
     display: flex;
     flex-wrap: wrap;
@@ -56,8 +49,7 @@
     gap: 60px;
     justify-content: center;
   }
-
-  @include mq(desk) {
+  @media screen and (max-width: 767px) {
     display: flex;
     gap: 70px;
     align-items: baseline;
@@ -177,9 +169,8 @@
   &:focus {
     border-color: $blue-logo-color;
   }
-
-  &__icon {
-    display: block;
-    margin-left: 10px;
-  }
+}
+.subscribe-form__icon {
+  display: block;
+  margin-left: 10px;
 }
