@@ -7,9 +7,11 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   line-height: 1.71;
-  position: relative;
+  /*position: relative;*/
+  &.modal-open {
+    overflow: hidden;
   }
-
+}
 
 .no-scroll {
   overflow: hidden;
