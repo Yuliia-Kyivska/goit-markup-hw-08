@@ -1,19 +1,27 @@
-.checks {
+/*.checks {
   margin-bottom: 30px;
-}
+}*/
 
 .checkbox-link {
   color: $blue-logo-color;
 }
 
 .checkbox-label {
-  position: relative;
+  /*position: relative;*/
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  @include mq(desk) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
-
 
 .checkbox {
   -webkit-user-select: none;
@@ -21,7 +29,6 @@
   -ms-user-select: none;
   user-select: none;
   appearance: none;
-
 }
 
 .checkbox:checked {
@@ -40,8 +47,7 @@
   transition: border 250ms $cub-bez;
 }
 
-
-.checkbox-label input:checked~.checkmark-icon {
+.checkbox-label input:checked ~ .checkmark-icon {
   background-color: $blue-logo-color;
   border: 2px solid $blue-logo-color;
 }
@@ -52,7 +58,7 @@
   transition-timing-function: $cub-bez;
 }
 
-.checkbox-label input:hover~.checkmark-icon,
-.checkbox-label input:focus~.checkmark-icon {
+.checkbox-label input:hover ~ .checkmark-icon,
+.checkbox-label input:focus ~ .checkmark-icon {
   border: 2px solid $blue-logo-color;
 }
