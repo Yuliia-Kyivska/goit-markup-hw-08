@@ -2,90 +2,184 @@
   background-color: $background-dark-grey;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  &.social-list__link {
+    color: $white;
+    transition: background-color 250ms $cub-bez;
+  }
+
+  @include mq(mob-only) {
+    text-align: center;
+  }
 }
 
-.footer-container {
-  display: flex;
-  gap: 70px;
-  align-items: baseline;
-}
-
-.footer .logo {
-  margin-bottom: 20px;
-}
-
-.footer-title {
+/*.footer-title {
   display: block;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-line-height: 1.14;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $white-color;
   margin-bottom: 20px;
 
   @include mq(mob-only) {
-      margin-top: 60px;
-    }
-  
-    @include mq(noDesk) {
-      text-align: center;
-    }
+    margin-top: 60px;
+  }
+
+  @include mq(noDesk) {
+    text-align: center;
+  }
 }
+*/
 
 .address {
+  color: $footer-primary-color;
   font-style: inherit;
 }
 
-.address-list {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
+.footer__list {
+  display: block;
+  text-align: center;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  @include mq(tab-only) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+  }
+
+  @include mq(desk) {
+    display: flex;
+    gap: 70px;
+    align-items: baseline;
+  }
 }
 
-.address-link {
-  color: $footer-primary-color;
+.footer__item {
+  @include mq(desk) {
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+}
+.footer__logo {
+  margin-bottom: 20px;
+
+  @include mq(noDesk) {
+    justify-content: center;
+    margin-right: 0;
+  }
 }
 
 .street {
+  font-style: normal;
   color: $white-color;
 }
 
-.address .link {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: $cub-bez;
+.footer-contacts {
+  @include mq(tab-only) {
+    text-align: center;
+  }
 }
 
-.address .link:hover,
-.address .link:focus {
-  color: $blue-logo-color;
+.footer-contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
-.footer-submit {
-  margin-left: auto;
+.footer-contacts__link {
+  transition: color 250ms $cub-bez;
 
+  &:hover,
+  &:focus {
+    color: $blue-logo-color;
+  }
 }
 
-form.footer-form {
-  display: flex;
+.subscription__title {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-color;
+  margin-bottom: 20px;
+
+  @include mq(mob-only) {
+    margin-top: 60px;
+  }
+
+  @include mq(noDesk) {
+    text-align: center;
+  }
 }
 
-.footer-form input {
-  width: 358px;
+.subscribe-form {
+  display: block;
+  align-items: center;
+
+  @include mq(desk) {
+    display: flex;
+  }
+}
+
+.subscribe-form__input {
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
+  letter-spacing: 0.03em;
   height: 50px;
   color: $white-color;
   margin-right: 12px;
   padding: 16px 15px;
-
   font-size: 16px;
   background-color: transparent;
   border: 1px solid $bord-input;
   filter: $filtr-imput;
   border-radius: 4px;
-}
+  transition: border-color 250ms $cub-bez;
 
-.span-subscribe {
-  margin-right: 10px;
+  @media screen and (max-width: 479px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @include mq(mob) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+
+  @include mq(tab-only) {
+    width: 450px;
+  }
+
+  @include mq(desk) {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $blue-logo-color;
+  }
+
+  &__icon {
+    display: block;
+    margin-left: 10px;
+  }
 }

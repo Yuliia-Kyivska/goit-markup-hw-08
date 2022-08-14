@@ -1,12 +1,23 @@
 .logo {
-  color: $blue-logo-color;
-  font-family: 'Raleway', cursive;
-  font-size: 24px;
+  font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 24px;
     line-height: 1.16;
     letter-spacing: 0.03em;
-  text-decoration: none;
-  display: flex;
+    color: $blue-logo-color;
+    padding: 16px 0px;
   
+    @include mq(tab) {
+      padding: 0;
+      margin-right: 88px;
+    }
+  
+    @include mq(desk) {
+      padding: 0;
+      margin-right: 93px;
+      font-size: 26px;
+      line-height: 1.19;
+    }
 }
 
 .nav__logo {

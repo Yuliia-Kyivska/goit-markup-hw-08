@@ -420,30 +420,38 @@
     <!--Подвал-->
     <footer class="footer">
       <div class="container">
-        <div class="footer-container">
-          <div class="footer-address">
-            <a href="index.html" class="logo">Web<span class="white">Studio</span></a>
+        <ul class="list footer__list">
+          <li class="footer__item">
+            <a href="index.html" class="logo footer__logo">Web<span class="white">Studio</span></a>
+
             <address class="address">
-              <ul class="list address-list">
-                <li>
+              <ul class="list footer-contacts" id="contacts">
+                <li class="footer-contacts__item">
                   <a
                     href="https://goo.gl/maps/6LCePJ9uV5C26gQX8"
                     target="_blank"
                     rel="noreferrer noopener"
-                    class="link street"
-                    >г. Киев, пр-т Леси Украинки, 26
+                    class="link footer-contacts__link street"
+                  >
+                    г. Киев, пр-т Леси Украинки, 26
                   </a>
                 </li>
-                <li>
-                  <a href="mailto:info@example.com" class="link address-link">info@example.com</a>
+                <li class="footer-contacts__item">
+                  <a href="mailto:info@example.com" class="link footer-contacts__link"
+                    >info@example.com</a
+                  >
                 </li>
-                <li><a href="tel:+380991111111" class="link address-link">+38 099 111 11 11</a></li>
+                <li class="footer-contacts__item">
+                  <a href="tel:+380991111111" class="link footer-contacts__link"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
               </ul>
             </address>
-          </div>
+          </li>
 
-          <div class="footer-social">
-            <p class="footer-title">присоединяйтесь</p>
+          <li class="subscription footer__item">
+            <p class="subscription__follow">присоединяйтесь</p>
 
             <ul class="list social-list">
               <li class="social-list__item">
@@ -478,16 +486,17 @@
                 </a>
               </li>
             </ul>
-          </div>
-          <div class="footer-submit">
-            <p class="footer-title">Подпишитесь на рассылку</p>
+          </li>
 
-            <form class="footer-form">
+          <li class="subscription footer__item">
+            <p class="subscription__title">Подпишитесь на рассылку</p>
+
+            <form class="subscribe-form">
               <input
-                class="footer-input"
+                class="subscribe-form__input"
                 type="email"
                 name="email"
-                id="email-footer"
+                id="email"
                 placeholder="E-mail"
                 required
               />
@@ -499,8 +508,8 @@
                 </svg>
               </button>
             </form>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </footer>
 
