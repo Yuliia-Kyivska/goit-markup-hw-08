@@ -1,38 +1,41 @@
-/* block 3  */
-
-.hero-button {
+.select-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
-  color: $white-color;
-  background-color: $blue-logo-color;
-  font-family: inherit;
-  font-weight: 700;
+  gap: 8px;
+  margin-bottom: 50px;
+  row-gap: 8px;
+  column-gap: 15px;
+}
+
+.select-list__button {
+  padding: 6px 22px;
+  font-family: 'Roboto';
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.9;
-  letter-spacing: 0.06em;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px 0px $button-shadow;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  color: $color-dark;
+  background-color: $light-gray-backg;
   border: none;
-  padding: 10px 32px;
-  min-width: 200px;
-  transition-property: background-color;
+  border-radius: 4px;
+  transition-property: background-color, color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: $cub-bez;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $blue-logo-color;
+    box-shadow: 0px 4px 4px 0px $button-shadow;
+  }
 }
 
-.hero-button:hover,
-.hero-button:focus {
-  background-color: $blue-dark;
-}
-
-
-
-.select-button {
-  cursor: pointer;
+/*
+.select-button{
+cursor: pointer;
   font-family: inherit;
   background-color: $light-gray-backg;
   color: $color-dark;
@@ -53,10 +56,6 @@
   color: $white-color;
   box-shadow: 0px 4px 4px 0px $button-shadow;
 }
-.select-list {
-  display: flex;
-  justify-content: center;
-}
 
 .select-list .select-item:not(:last-child) {
   margin-right: 8px;
@@ -65,11 +64,4 @@
 .list.select-list {
   margin-bottom: 50px;
 }
-
-.button-submit,
-.hero-submit {
-  background: $blue-logo-color;
-  box-shadow: 0px 4px 4px $bt-submit-footer;
-  border-radius: 4px;
-  border: none;
-}
+*/

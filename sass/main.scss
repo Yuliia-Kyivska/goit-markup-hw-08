@@ -8,7 +8,8 @@
 @import './base/reset';
 
 //components style
-@import './components/buttons';
+@import './components/hero-button';
+@import './components/portfolio-button';
 @import './components/card-set';
 @import './components/container';
 @import './components/logo';
@@ -21,7 +22,6 @@
 @import './components/modal';
 @import './components/modal-checkbox';
 @import './components/menu';
-@import './components/mobile-menu';
 
 //layouts style
 @import './layouts/header';

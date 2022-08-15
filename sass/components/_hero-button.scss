@@ -1,0 +1,44 @@
+/* block 3  */
+
+.hero-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  color: $white-color;
+  background-color: $blue-logo-color;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px $button-shadow;
+  border: none;
+  padding: 10px 32px;
+  min-width: 200px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: $cub-bez;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: $blue-dark;
+}
+
+/*.button-submit {
+  background: $blue-logo-color;
+  box-shadow: 0px 4px 4px $bt-submit-footer;
+  border-radius: 4px;
+  border: none;
+}
+*/
+/*.hero-submit {
+  background: $blue-logo-color;
+  box-shadow: 0px 4px 4px $bt-submit-footer;
+  border-radius: 4px;
+  border: none;
+}*/

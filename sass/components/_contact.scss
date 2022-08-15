@@ -21,7 +21,6 @@
 }
 
 .contact__link {
-  
   @include mq(noDesk) {
     font-weight: 500;
     font-size: 12px;
@@ -33,17 +32,11 @@
   @include mq(desk) {
     padding-top: 32px;
     padding-bottom: 32px;
-   
   }
-    display: flex;
-    margin-left: auto;
-     transition: color,
-     250ms,
-     $cub-bez;
+  display: flex;
+  margin-left: auto;
+  transition: color, 250ms, $cub-bez;
 }
-
-
-
 
 .contact__link:hover,
 .contact__link:focus {
@@ -56,5 +49,4 @@
   align-self: center;
   fill: currentColor;
   margin-right: 10px;
-  
 }

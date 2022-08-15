@@ -15,7 +15,7 @@
     margin-left: calc(-1 * $card-set-gap); */
 }
 
-.cards-item {
+.cards-set__item {
   flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-set-gap)) / var(--card-item));
   /* margin-top: $card-set-gap;
     margin-left: $card-set-gap; */

@@ -1,26 +1,23 @@
 .team {
   background-color: $light-gray-backg;
 }
-.team-list{
+.team__list {
   @include mq(tab) {
-      --cards-item: 2;
-    }
-  
-    @include mq(desk) {
-      --cards-item: 4;
-    }
-}
-.team-list__item {
-  box-shadow: 0px 1px 3px $team-btm, 0px 1px 1px $team-bl, 0px 2px 1px $team-br;
-  border-radius: 0px 0px 4px 4px;
+    --card-item: 2;
+  }
+
+  @include mq(desk) {
+    --card-item: 4;
+  }
 }
 
-.team__content {
-  text-align: center;
+.team__item {
   background-color: $white-color;
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px $team-btm, 0px 1px 1px $team-bl, 0px 2px 1px $team-br;
+}
+.team__content {
   padding: 30px;
-  margin: 0;
 }
 
 .team__title {
@@ -29,10 +26,14 @@
   color: $color-dark;
   margin-bottom: 10px;
 }
-
-.team__specialist {
+.team__title,
+.team__text {
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.19;
   text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team__text {
   margin-bottom: 16px;
 }
