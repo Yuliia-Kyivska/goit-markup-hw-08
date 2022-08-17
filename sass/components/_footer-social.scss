@@ -1,12 +1,13 @@
-.footer-social {
+.footer .social-icon {
+  fill: $white-color;
+}
+.footer .social-list .social-list__icon {
+  fill: $white-color;
+}
+
+/*.footer-social {
   width: 206px;
   height: 80px;
   align-items: baseline;
 }
-
-.footer .social-icon {
-  fill: $white-color;
-}
-.footer-social .social-list__icon {
-  fill: $white-color;
-}
+*/
