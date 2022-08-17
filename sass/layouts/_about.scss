@@ -1,20 +1,20 @@
-.about__container {
+/*.about__container {
   padding-top: 0;
-}
-.about{
+}*/
+.about {
   @include mq(noDesk) {
-      display: none;
-    }
+    display: none;
+  }
 }
 
 .about__list {
   --card-item: 3;
 
-    &-item {
+  &-item {
     position: relative;
   }
 
-    &-text {
+  &-text {
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -27,12 +27,11 @@
     background-color: $bgcolor-wdtext;
   }
 
-    &-title {
+  &-title {
     font-weight: 700;
     line-height: 1.14;
     text-align: center;
     text-transform: uppercase;
     color: $white-color;
   }
-
 }
