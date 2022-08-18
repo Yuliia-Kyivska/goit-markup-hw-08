@@ -140,13 +140,6 @@ img {
             justify-content: center;
   }
 }
-@media screen and (min-width: 1200px) {
-  .select-list {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
 
 .select-list__button {
   padding: 6px 22px;

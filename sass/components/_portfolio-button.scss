@@ -6,10 +6,8 @@
   margin-bottom: 50px;
   row-gap: 8px;
   column-gap: 15px;
+
   @include mq(tab) {
-    justify-content: center;
-  }
-  @include mq(desk) {
     justify-content: center;
   }
 }
